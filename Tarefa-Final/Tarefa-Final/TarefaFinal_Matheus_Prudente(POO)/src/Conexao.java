@@ -7,9 +7,9 @@ public class Conexao {
 			Connection conn = null;
 			try {
 				   Class.forName("com.mysql.cj.jdbc.Driver");
-				   conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bar", "root", "MCi3sKg!tjth");
+				   conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/NOME_DO_BANCO", "SEU NOME DE USUARIO AQUI (EX : ROOT)", "SUA SENHA AQUI");
 			} catch (SQLException ex) {
-				   System.out.println("Erro: Não conseguiu conectar no BD.");
+				   System.out.println("Erro: NÃ£o conseguiu conectar no BD.");
 				   System.out.println(ex);
 			}
 			return conn;
@@ -21,7 +21,7 @@ public class Conexao {
 					conn.close();
 				}
 			} catch (SQLException ex) {
-				System.out.println("Não conseguiu desconectar do BD.");
+				System.out.println("NÃ£o conseguiu desconectar do BD.");
 			}
 		}
 }
